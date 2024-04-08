@@ -1,6 +1,5 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-
+import { View, Text } from "react-native";
+import React from "react";
 
 //componente de prueba
 const Prueba = () => {
@@ -8,7 +7,7 @@ const Prueba = () => {
     <View className="flex-1 justify-center items-center">
       <Text>Prueba</Text>
     </View>
-  )
-}
+  );
+};
 
-export default Prueba
+export default Prueba;
