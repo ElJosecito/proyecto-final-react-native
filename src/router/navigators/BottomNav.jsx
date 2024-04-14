@@ -7,6 +7,9 @@ import { StyleSheet, View } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Prueba from "../../screens/Prueba";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
+import HomeScreen from "../../screens/HomeScreen";
+import HistoryScreen from "../../screens/HistoryScreen";
+import ServicesScreen from "../../screens/ServicesScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -23,7 +26,7 @@ const BottomNav = () => {
       {}
       <Tab.Screen
         name="Home"
-        component={Prueba}
+        component={HomeScreen}
         options={{
           tabBarIcon: ({ focused }) => (
             <View
@@ -41,6 +44,7 @@ const BottomNav = () => {
             </View>
           ),
         }}
+
           />
 
           {}
@@ -132,6 +136,29 @@ const BottomNav = () => {
               }}
           />
       
+
+      />
+      <Tab.Screen
+        name="Menu"
+        component={HistoryScreen}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <View
+              style={{
+                alignItems: "center",
+                justifyContent: "center",
+                top: 10,
+              }}
+            >
+              <FontAwesome
+                name="info-circle"
+                size={focused ? 28 : 24}
+                color={focused ? "white" : "grey"}
+              />
+            </View>
+          ),
+        }}
+      />
     </Tab.Navigator>
   );
 };
