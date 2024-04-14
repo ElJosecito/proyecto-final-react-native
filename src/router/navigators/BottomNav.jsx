@@ -1,7 +1,3 @@
-import VolunteerForm from '../../components/VolunteerForm';
-import About from '../../components/About';
-import ReportSituation from '../../components/ReportSituation';
-import SpecificNews from '../../components/SpecificNews';
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -9,7 +5,8 @@ import Prueba from "../../screens/Prueba";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import HomeScreen from "../../screens/HomeScreen";
 import HistoryScreen from "../../screens/HistoryScreen";
-import ServicesScreen from "../../screens/ServicesScreen";
+import About from "../../screens/About";
+
 
 const Tab = createBottomTabNavigator();
 
@@ -23,7 +20,7 @@ const BottomNav = () => {
         tabBarStyle: styles.tabBarStyle,
       }}
     >
-      {}
+
       <Tab.Screen
         name="Home"
         component={HomeScreen}
@@ -44,102 +41,32 @@ const BottomNav = () => {
             </View>
           ),
         }}
-
-          />
-
-          {}
-          <Tab.Screen
-              name="VolunteerForm"
-              component={VolunteerForm}
-              options={{
-                  tabBarIcon: ({ focused }) => (
-                      <View
-                          style={{
-                              alignItems: "center",
-                              justifyContent: "center",
-                              top: 10,
-                          }}
-                      >
-                          <FontAwesome
-                              name="user-plus"
-                              size={focused ? 28 : 24}
-                              color={focused ? "white" : "grey"}
-                          />
-                      </View>
-                  ),
-              }}
-          />
-
-          <Tab.Screen
-              name="About"
-              component={About}
-              options={{
-                  tabBarIcon: ({ focused }) => (
-                      <View
-                          style={{
-                              alignItems: "center",
-                              justifyContent: "center",
-                              top: 10,
-                          }}
-                      >
-                          <FontAwesome
-                              name="info-circle"
-                              size={focused ? 28 : 24}
-                              color={focused ? "white" : "grey"}
-                          />
-                      </View>
-                  ),
-              }}
-          />
-
-          <Tab.Screen
-              name="ReportSituation"
-              component={ReportSituation}
-              options={{
-                  tabBarIcon: ({ focused }) => (
-                      <View
-                          style={{
-                              alignItems: "center",
-                              justifyContent: "center",
-                              top: 10,
-                          }}
-                      >
-                          <FontAwesome
-                              name="exclamation-triangle"
-                              size={focused ? 28 : 24}
-                              color={focused ? "white" : "grey"}
-                          />
-                      </View>
-                  ),
-              }}
-          />
-
-          <Tab.Screen
-              name="SpecificNews"
-              component={SpecificNews}
-              options={{
-                  tabBarIcon: ({ focused }) => (
-                      <View
-                          style={{
-                              alignItems: "center",
-                              justifyContent: "center",
-                              top: 10,
-                          }}
-                      >
-                          <FontAwesome
-                              name="newspaper-o"
-                              size={focused ? 28 : 24}
-                              color={focused ? "white" : "grey"}
-                          />
-                      </View>
-                  ),
-              }}
-          />
-      
-
       />
+      {/* hamburger item */}
       <Tab.Screen
-        name="Menu"
+        name="Prueba"
+        component={Prueba}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <View
+              style={{
+                alignItems: "center",
+                justifyContent: "center",
+                top: 10,
+              }}
+            >
+              <FontAwesome
+                name="bars"
+                size={focused ? 28 : 24}
+                color={focused ? "white" : "grey"}
+              />
+            </View>
+          ),
+        }}
+      />
+      {/* history item */}
+      <Tab.Screen
+        name="History"
         component={HistoryScreen}
         options={{
           tabBarIcon: ({ focused }) => (
@@ -151,7 +78,30 @@ const BottomNav = () => {
               }}
             >
               <FontAwesome
-                name="info-circle"
+                name="history"
+                size={focused ? 28 : 24}
+                color={focused ? "white" : "grey"}
+              />
+            </View>
+          ),
+        }}
+      />
+
+      {/* about icon */}
+      <Tab.Screen
+        name="About"
+        component={About}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <View
+              style={{
+                alignItems: "center",
+                justifyContent: "center",
+                top: 10,
+              }}
+            >
+              <FontAwesome
+                name="info"
                 size={focused ? 28 : 24}
                 color={focused ? "white" : "grey"}
               />

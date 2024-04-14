@@ -6,7 +6,7 @@ const About = () => {
         <View style={styles.container}>
             <Text style={styles.title}>Acerca de</Text>
             <Text style={styles.description}>
-                Esta aplicación fue desarrollada por un equipo de estudiantes del Instituto Tecnologico de las Americas (ITLA)  con el objetivo de brindar información y servicios esenciales.
+                Esta aplicacion fue desarrollada por un equipo de estudiantes del Instituto Tecnologico de las Americas (ITLA)  con el objetivo de brindar informacion y servicios esenciales.
             </Text>
             <Text style={styles.sectionTitle}>Equipo de desarrollo</Text>
             <View style={styles.developersContainer}>

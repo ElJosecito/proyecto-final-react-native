@@ -1,7 +1,7 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { View, Text } from "react-native";
+import { View } from "react-native";
 //screens
 import NoticiasScreen from "../screens/NoticiasScreen";
 import VideosScreen from "../screens/VideoScreen";
@@ -9,6 +9,7 @@ import AlberguesScreen from "../screens/AlberguesScreen";
 import MapsAlbergue from "../screens/MapsAlbergue";
 import MiembrosScreen from "../screens/MiembrosScreen";
 import MedidasPreventivasScreen from "../screens/MedidasPreventivasScreen";
+import VolunteerForm from "../screens/VolunteerForm";
 //navigators
 import BottomNav from "./navigators/BottomNav";
 
@@ -87,7 +88,14 @@ const Routes = () => {
                         }}
                     />
 
-
+                    {/* VolunteerForm */}
+                    <Stack.Screen
+                        name="VolunteerForm"
+                        component={VolunteerForm}
+                        options={{
+                            headerShown: false,
+                        }}
+                    />
 
 
 
