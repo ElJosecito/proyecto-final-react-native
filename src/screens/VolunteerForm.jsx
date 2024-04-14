@@ -23,7 +23,7 @@ const VolunteerForm = () => {
             />
             <TextInput
                 style={styles.input}
-                placeholder="Correo electrónico"
+                placeholder="Correo electronico"
                 value={email}
                 onChangeText={setEmail}
                 keyboardType="email-address"
@@ -31,7 +31,7 @@ const VolunteerForm = () => {
             />
             <TextInput
                 style={styles.input}
-                placeholder="Número de teléfono"
+                placeholder="Numero de telefono"
                 value={phone}
                 onChangeText={setPhone}
                 keyboardType="phone-pad"
