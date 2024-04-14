@@ -1,7 +1,7 @@
+
 import { View, Text, Pressable } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import React from 'react'
-
 
 //componente de prueba
 const Prueba = () => {
@@ -65,7 +65,7 @@ const Prueba = () => {
 
 
     </View>
-  )
-}
+  );
+};
 
-export default Prueba
+export default Prueba;
